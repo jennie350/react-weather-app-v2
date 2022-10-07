@@ -14,7 +14,7 @@ export default function Weather(){
                 className="form-control"/>
         </div>
                     <div className="col-3">
-                        <input  type="submit" value="Current location" className="btn btn-success"/>
+                        <input  type="submit" value="Current location" className="btn btn-dark"/>
                          </div>
                          
                          </div>
@@ -28,17 +28,18 @@ export default function Weather(){
                                 <p className="Last-updated">Last updated: Friday 12:55</p>
                             </div>
                             <div className="row">
-                                <div className="col-6">
+                                <div className="col-4">
                                     <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny"/>
                                 </div>
                                 <div className="col-3">
-                                    <h2>27°C</h2>
-                                    <p>Feels like 25°C</p>
+                                    <h2>27</h2><span className="Unit">°C</span>
+                                    <p className="Feels-like">Feels like 25°C</p>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-4">
                                     <ul>
                                         <li>
-                                            Sunny
+                                            <strong>Sunny</strong>
+                                
                                         </li>
                                         <li>
                                             Wind speed 12 km/h
@@ -52,7 +53,7 @@ export default function Weather(){
 
             </div>
             <footer>
-<a href="https://github.com/jennie350/react-weather-app-v2" target="_blank" rel="noreferrer" >Open source code </a> by Jenny Watts.
+<a href="https://github.com/jennie350/react-weather-app-v2" target="_blank" rel="noreferrer" >Open source code</a> by Jenny Watts.
             </footer>
             </div>
        

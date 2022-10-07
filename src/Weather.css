@@ -1,9 +1,51 @@
 
 
 .Wrapper {
-
-background: white;
-    border: 1px solid #dadde1;
-    padding: 30px;
-    border-radius: 4px;
+background:white;
+    border: 2px solid #fff;
+    padding: 30px 30px 10px;
+    border-radius: 2px;
+    box-shadow: 8px 5px 9px rgb(0 0 0 / 10%);
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    color: #423b3b;
+   
 }
+
+.Last-updated {
+    font-weight: lighter;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.Wrapper h1{
+margin-top: 8px;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+}
+
+.Wrapper h2{
+    font-size: 48px;
+    font-weight: 400;
+    display: inline;
+}
+
+.Wrapper .Feels-like {
+    font-weight: lighter;
+    color:#696666;
+}
+
+.Wrapper li{
+    list-style: none;
+    color:#696666;
+    padding-bottom: 5px;
+}
+
+.Wrapper .Unit {
+    position: relative;
+    top: -20px;
+}
+
