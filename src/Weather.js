@@ -55,7 +55,7 @@ if(weather.ready) {
                 </form> 
         </div>
                     <div className="col-3">
-                        <input  type="submit" value="Current location" className="btn btn-dark"/>
+                        <input  type="submit" value="Search" className="btn btn-dark"/>
                          </div>
                          </div>
                          <WeatherInfo info={weather}/>
