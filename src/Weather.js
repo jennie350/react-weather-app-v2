@@ -16,6 +16,7 @@ function showWeather(response) {
         city: response.data.name,
         date: new Date(response.data.dt*1000),
         temperature: response.data.main.temp,
+        feelsTemp: response.data.main.feels_like,
         description: response.data.weather[0].description,
         humidity: response.data.main.humidity,
         wind: response.data.wind.speed,
