@@ -66,7 +66,7 @@ if(weather.ready) {
                          <WeatherInfo info={weather}/>
                          </div>
                          <footer>
-                          <a href="https://github.com/jennie350/react-props-app-v2" target="_blank" rel="noreferrer" >Open source code</a> by Jenny Watts.
+                          <a href="https://github.com/jennie350/react-weather-app-v2" target="_blank" rel="noreferrer" >Open source code</a> by Jenny Watts.
                                       </footer>
                          </div>
                          
