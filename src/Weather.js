@@ -43,21 +43,26 @@ if(weather.ready) {
     return(
         <div className="Container">
         <div className="Wrapper">
+        <form onSubmit={handleSubmit}>
             <div className="row">
-                <div className="col-9">
-               <form onSubmit={handleSubmit}>
+               
+               
+                <div className="col-10">
                 <input 
                 type="search" 
                 placeholder="🔍 Type city and press Enter"
                 className="form-control"
                 onChange={changeCity}
                 />
-                </form> 
-        </div>
-                    <div className="col-3">
-                        <input  type="submit" value="Search" className="btn btn-dark"/>
+                </div>
+                <div className="col-2">
+        <input  type="submit" value="Search" className="btn btn-dark"/>
+                  
+                  </div>
+                  
                          </div>
-                         </div>
+                         </form>
+                         
                          <WeatherInfo info={weather}/>
                          </div>
                          <footer>

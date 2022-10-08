@@ -25,7 +25,7 @@ export default function WeatherInfo(props){
                                 <div className="col-3">
                                     <Temperature celsius={props.info.temperature} celsiusFeels={props.info.feelsTemp}/>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-5">
                                     <ul>
                                         <li>
                                             <strong className="text-capitalize">{props.info.description}</strong>
