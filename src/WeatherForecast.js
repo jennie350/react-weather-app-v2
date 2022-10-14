@@ -9,9 +9,9 @@ export default function WeatherForecast(props) {
     let [forecast, setForecast]=useState(null);
 
     function showForecast(response){
-        setLoaded(true);
         setForecast(response.data.daily);
-        
+        setLoaded(true);
+
     }
 
     function searchForecast(){
@@ -19,27 +19,40 @@ export default function WeatherForecast(props) {
         let lat =props.coordinates.lat;
         let lon = props.coordinates.lon;
     let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-    
+
     axios.get(apiUrl).then(showForecast)
     }
-  
+
 
 if(loaded) {
-    console.log(forecast)
     return (
-        
         <div className="Weather-forecast">
             <div className="row">
-               <WeatherForecastDay data={forecast}/>
+                {forecast.map(function (dailyForecast, index) {
+
+                   if (index < 5) {
+                return (
+                    <div className="col" key={index}>
+
+                    <WeatherForecastDay data={dailyForecast}/>
+                   </div>
+                )
+                   }
+                   else {
+                    return null;
+                   }
+
+
+})}
+
             </div>
-            
         </div>
     )
 }
 
     else {
-      
+
 searchForecast();
-        
+
     }
 }

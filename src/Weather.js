@@ -8,10 +8,10 @@ import './Weather.css'
 export default function Weather(props) {
     const [city, setCity] = useState(props.defaultCity)
     const [weather, setWeather] = useState ({ready: false});
-    
+
 
 function showWeather(response) {
-    
+
     setWeather({
         ready: true,
         city: response.data.name,
@@ -47,11 +47,11 @@ if(weather.ready) {
         <div className="Wrapper">
         <form onSubmit={handleSubmit}>
             <div className="row">
-               
-               
+
+
                 <div className="col-10">
-                <input 
-                type="search" 
+                <input
+                type="search"
                 placeholder="🔍 Type city and press Enter"
                 className="form-control"
                 onChange={changeCity}
@@ -59,12 +59,12 @@ if(weather.ready) {
                 </div>
                 <div className="col-2">
         <input  type="submit" value="Search" className="btn btn-dark"/>
-                  
+
                   </div>
-                  
+
                          </div>
                          </form>
-                         
+
                          <WeatherInfo info={weather}/>
                          <WeatherForecast coordinates={weather.coordinates}/>
                          </div>
@@ -72,8 +72,8 @@ if(weather.ready) {
                           <a href="https://github.com/jennie350/react-weather-app-v2" target="_blank" rel="noreferrer" >Open source code</a> by Jenny Watts.
                                       </footer>
                          </div>
-                         
-                                     
+
+
  )
 }
 else {
@@ -81,11 +81,10 @@ else {
     search()
 
     return (
-       
+
     "Loading..."
-       
+
     )
-} 
+}
 }
 
-    
