@@ -15,20 +15,18 @@ export default function WeatherForecastDay(props){
     )
     }
 
-    console.log(props.data)
-
     return (
         <div className="Forecast-day">
             {showDay()}
          <span className="Forecast-temp-high">
-             {maxTemp}° 
+             {maxTemp}°
          </span>
          <span className="Forecast-temp-low">
          {minTemp}°
          </span>
          <WeatherIcon iconCode={props.data.weather[0].icon} size={40}/>
      </div>
-       
+
     )
 }
 
