@@ -1,39 +1,45 @@
-import React, { startTransition } from "react";
-import WeatherIcon from "./WeatherIcon"
+import React, {useState} from "react";
+import WeatherForecastDay from "./WeatherForecastDay";
 import axios from "axios";
 
 
 
 export default function WeatherForecast(props) {
-    
+    let [loaded, setLoaded]= useState(false);
+    let [forecast, setForecast]=useState(null);
+
     function showForecast(response){
-        console.log(response.data);
+        setLoaded(true);
+        setForecast(response.data.daily);
+        
     }
 
-    let apiKey= "082d3d02ffdb12f2fd9b259e2ced1d0d"
-    let lat =props.coordinates.lat
-    let lon = props.coordinates.lon
-let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    function searchForecast(){
+        let apiKey= "082d3d02ffdb12f2fd9b259e2ced1d0d";
+        let lat =props.coordinates.lat;
+        let lon = props.coordinates.lon;
+    let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    
+    axios.get(apiUrl).then(showForecast)
+    }
+  
 
-axios.get(apiUrl).then(showForecast)
-
+if(loaded) {
+    console.log(forecast)
     return (
+        
         <div className="Weather-forecast">
             <div className="row">
-                <div className="col">
-                    <h4>
-                        Mon
-                    </h4>
-                    <span className="Forecast-temp-high">
-                        20° 
-                    </span>
-                    <span className="Forecast-temp-low">
-                    13°
-                    </span>
-                    <WeatherIcon iconCode="10n" size={40}/>
-                </div>
+               <WeatherForecastDay data={forecast}/>
             </div>
             
         </div>
     )
+}
+
+    else {
+      
+searchForecast();
+        
+    }
 }
