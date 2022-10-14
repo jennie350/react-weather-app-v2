@@ -33,9 +33,11 @@ margin-top: 8px;
     display: inline;
 }
 
+
 .Wrapper .Feels-like {
     font-weight: lighter;
     color:#696666;
+   
 }
 
 .Wrapper li{
@@ -49,10 +51,29 @@ margin-top: 8px;
     top: -20px;
 }
 
-.Wrapper canvas{
+.Weather-icon canvas{
     margin-top: 5px;
     margin-left: 40px;
-    
-
 }
+
+
+.Weather-forecast{
+    text-align: center;
+    }
+
+   .Weather-forecast h4 {
+        font-size: 16px;
+       
+    }
+
+     .Weather-forecast .Forecast-temp-high {
+        font-size: 14px;
+    }
+    
+    .Weather-forecast .Forecast-temp-low {
+        font-size: 14px;
+        font-weight: lighter;
+        margin-left: 5px;
+       
+    }
 

@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import './Weather.css'
 
@@ -64,6 +65,7 @@ if(weather.ready) {
                          </form>
                          
                          <WeatherInfo info={weather}/>
+                         <WeatherForecast />
                          </div>
                          <footer>
                           <a href="https://github.com/jennie350/react-weather-app-v2" target="_blank" rel="noreferrer" >Open source code</a> by Jenny Watts.
