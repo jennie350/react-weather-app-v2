@@ -15,6 +15,7 @@ function showWeather(response) {
     setWeather({
         ready: true,
         city: response.data.name,
+        coordinates: response.data.coord,
         date: new Date(response.data.dt*1000),
         temperature: response.data.main.temp,
         feelsTemp: response.data.main.feels_like,
@@ -65,7 +66,7 @@ if(weather.ready) {
                          </form>
                          
                          <WeatherInfo info={weather}/>
-                         <WeatherForecast />
+                         <WeatherForecast coordinates={weather.coordinates}/>
                          </div>
                          <footer>
                           <a href="https://github.com/jennie350/react-weather-app-v2" target="_blank" rel="noreferrer" >Open source code</a> by Jenny Watts.
